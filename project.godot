@@ -18,6 +18,7 @@ _global_script_class_icons={
 config/name="Brassica"
 run/main_scene="res://Scenes/Main.tscn"
 run/disable_stdout=true
+boot_splash/image="res://Splash.png"
 config/icon="res://icon.png"
 
 [display]
