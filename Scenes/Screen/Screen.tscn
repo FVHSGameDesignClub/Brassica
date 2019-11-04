@@ -15,4 +15,4 @@ centered = false
 
 [node name="BootScreen" parent="." instance=ExtResource( 3 )]
 visible = false
-frame = 47
+frame = 5
