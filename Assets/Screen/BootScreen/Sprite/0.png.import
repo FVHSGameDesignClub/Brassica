@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/37.png-01f387a38502c4ac1623e36d31da0609.stex"
+path="res://.import/0.png-1b85676ee8515e5bf9b3237dc8f923a5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Screen/BootScreen/Sprite/37.png"
-dest_files=[ "res://.import/37.png-01f387a38502c4ac1623e36d31da0609.stex" ]
+source_file="res://Assets/Screen/BootScreen/Sprite/0.png"
+dest_files=[ "res://.import/0.png-1b85676ee8515e5bf9b3237dc8f923a5.stex" ]
 
 [params]
 
