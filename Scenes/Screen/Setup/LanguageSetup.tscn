@@ -27,5 +27,5 @@ animations = [ {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.978415, 1.08994 )
 frames = SubResource( 1 )
-animation = "Korean"
+animation = "English"
 offset = Vector2( 640, 214 )
