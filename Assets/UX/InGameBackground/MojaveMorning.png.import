@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/MojaveNight.png-b13e57f2b77edbd24d46d00589aefdac.stex"
+path="res://.import/MojaveMorning.png-e3b0ef1879e6fd2de2fe04d93b6942ad.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/InGameBackground/MojaveNight.png"
-dest_files=[ "res://.import/MojaveNight.png-b13e57f2b77edbd24d46d00589aefdac.stex" ]
+source_file="res://Assets/UX/InGameBackground/MojaveMorning.png"
+dest_files=[ "res://.import/MojaveMorning.png-e3b0ef1879e6fd2de2fe04d93b6942ad.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
