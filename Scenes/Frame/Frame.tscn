@@ -15,6 +15,9 @@ extents = Vector2( 640, 30 )
 extents = Vector2( 16, 360 )
 
 [node name="Frame" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
 
 [node name="Area2D" type="Area2D" parent="."]
 

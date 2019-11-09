@@ -50,6 +50,5 @@ animations = [ {
 [node name="BootScreen" type="AnimatedSprite"]
 frames = SubResource( 1 )
 animation = "Default"
-frame = 49
-playing = true
+frame = 115
 centered = false
