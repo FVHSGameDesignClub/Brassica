@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Assets/Screen/SetupScreen/Language/String/Espanol.png" type="Texture" id=1]
-[ext_resource path="res://Assets/Screen/SetupScreen/Language/String/English.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Screen/SetupScreen/Language/String/English.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Screen/SetupScreen/Language/String/Espanol.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Screen/SetupScreen/Language/String/Korean.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Screen/SetupScreen/Language/Language.png" type="Texture" id=4]
 
@@ -9,12 +9,12 @@
 animations = [ {
 "frames": [ ExtResource( 1 ) ],
 "loop": true,
-"name": "Espanol",
+"name": "English",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 2 ) ],
 "loop": true,
-"name": "English",
+"name": "Espanol",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 3 ) ],
@@ -22,6 +22,13 @@ animations = [ {
 "name": "Korean",
 "speed": 5.0
 } ]
+
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://Assets/Fonts/OnIGothic/OnI.ttf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 15
+font_data = SubResource( 2 )
 
 [node name="LanguageSetup" type="Node2D"]
 
@@ -37,3 +44,47 @@ centered = false
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="Languages" type="ScrollContainer" parent="."]
+margin_left = 560.0
+margin_top = 252.0
+margin_right = 720.0
+margin_bottom = 480.0
+scroll_horizontal_enabled = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Languages"]
+margin_right = 160.0
+margin_bottom = 71.0
+rect_min_size = Vector2( 160, 0 )
+alignment = 1
+
+[node name="VBOX" type="VBoxContainer" parent="Languages/HBoxContainer"]
+margin_left = 48.0
+margin_right = 111.0
+margin_bottom = 71.0
+
+[node name="English" type="Button" parent="Languages/HBoxContainer/VBOX"]
+margin_right = 63.0
+margin_bottom = 21.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "English"
+flat = true
+
+[node name="Español" type="Button" parent="Languages/HBoxContainer/VBOX"]
+margin_top = 25.0
+margin_right = 63.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Español"
+flat = true
+
+[node name="Korean" type="Button" parent="Languages/HBoxContainer/VBOX"]
+margin_top = 50.0
+margin_right = 63.0
+margin_bottom = 71.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "한국어"
+flat = true
