@@ -10,9 +10,9 @@ texture = ExtResource( 1 )
 centered = false
 
 [node name="Button" type="Button" parent="."]
-margin_left = 140.0
-margin_top = 45.0
-margin_right = 172.0
-margin_bottom = 67.0
+margin_left = 139.943
+margin_top = 45.116
+margin_right = 167.943
+margin_bottom = 67.116
 icon = ExtResource( 2 )
 flat = true
