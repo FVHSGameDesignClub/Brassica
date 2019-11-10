@@ -12,11 +12,11 @@ func _process(delta):
 		Turn_PresentScreen()
 	pass
 	
-func _on_Previous_pressed():
-	step =- 1
-
 func _on_Next_pressed():
 	step =+ 1
+
+func _on_Previous_pressed():
+	step =- 1
 
 func Turn_LanguageSetup():
 	$LanguageSetup.show()
