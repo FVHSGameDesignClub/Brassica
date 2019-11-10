@@ -14,11 +14,9 @@ func _process(delta):
 	
 func _on_Previous_pressed():
 	step =- 1
-	pass
 
 func _on_Next_pressed():
 	step =+ 1
-	pass
 
 func Turn_LanguageSetup():
 	$LanguageSetup.show()
