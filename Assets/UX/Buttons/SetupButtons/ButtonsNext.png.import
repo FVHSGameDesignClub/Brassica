@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Previous.png-7686962669bc7592ede353b70a8d5a22.stex"
+path="res://.import/ButtonsNext.png-8e99608f9be11ea364cfcd84e7ff7962.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Screen/SetupScreen/Buttons/Previous.png"
-dest_files=[ "res://.import/Previous.png-7686962669bc7592ede353b70a8d5a22.stex" ]
+source_file="res://Assets/UX/Buttons/SetupButtons/ButtonsNext.png"
+dest_files=[ "res://.import/ButtonsNext.png-8e99608f9be11ea364cfcd84e7ff7962.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
