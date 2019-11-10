@@ -3,6 +3,10 @@ extends Node2D
 var step = 0
 var s = 0
 
+var ENGLISH = "English"
+var SPANISH = "Spanish"
+var KOREAN = "Korean"
+
 func _ready():
 	pass
 	
@@ -38,4 +42,5 @@ func Turn_SettingUp():
 	$LanguageSetup.hide()
 	$PresentScreen.hide()
 	$SettingUp.show()
+	$SettingUp/Animation.play("default")
 	$Control.hide()
