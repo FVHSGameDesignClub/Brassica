@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Espanol.png-b44c588634d2db7a693b1516edb6431a.stex"
+path="res://.import/Spanish.png-ddeb937774a290562b5f8ff4fbc12acd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Screen/SetupScreen/Language/String/Espanol.png"
-dest_files=[ "res://.import/Espanol.png-b44c588634d2db7a693b1516edb6431a.stex" ]
+source_file="res://Assets/Screen/SetupScreen/Language/String/Spanish.png"
+dest_files=[ "res://.import/Spanish.png-ddeb937774a290562b5f8ff4fbc12acd.stex" ]
 
 [params]
 
