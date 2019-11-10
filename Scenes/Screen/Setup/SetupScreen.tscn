@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/Screen/Setup/SetupScreen.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Screen/SetupScreen/SetupScreen.png" type="Texture" id=2]
@@ -6,6 +6,10 @@
 [ext_resource path="res://Scenes/Screen/Setup/LanguageSetup.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/UX/Buttons/SetupButtons/ButtonsPrevious.png" type="Texture" id=5]
 [ext_resource path="res://Assets/UX/Buttons/SetupButtons/ButtonsNext.png" type="Texture" id=6]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
 
 [node name="SetupScreen" type="Node2D"]
 script = ExtResource( 1 )
@@ -35,6 +39,7 @@ margin_bottom = 539.0
 [node name="Previous" type="Button" parent="Control/HBox"]
 margin_right = 60.0
 margin_bottom = 54.0
+custom_styles/focus = SubResource( 1 )
 icon = ExtResource( 5 )
 flat = true
 
@@ -42,6 +47,7 @@ flat = true
 margin_left = 64.0
 margin_right = 124.0
 margin_bottom = 54.0
+custom_styles/focus = SubResource( 2 )
 icon = ExtResource( 6 )
 flat = true
 [connection signal="pressed" from="Control/HBox/Previous" to="." method="_on_Previous_pressed"]
