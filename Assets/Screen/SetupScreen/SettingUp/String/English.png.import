@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Korean.png-0adfb1cf038eece3f59e1d0de8e80b5e.stex"
+path="res://.import/English.png-6b1ed85d583f031f3e4818bec6ef480c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Screen/SetupScreen/SettingUp/Korean.png"
-dest_files=[ "res://.import/Korean.png-0adfb1cf038eece3f59e1d0de8e80b5e.stex" ]
+source_file="res://Assets/Screen/SetupScreen/SettingUp/String/English.png"
+dest_files=[ "res://.import/English.png-6b1ed85d583f031f3e4818bec6ef480c.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
