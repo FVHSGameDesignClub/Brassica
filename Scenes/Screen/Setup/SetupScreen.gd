@@ -13,11 +13,11 @@ func _process(delta):
 	pass
 	
 func _on_Previous_pressed():
-	step - 1
+	step =- 1
 	pass
 
 func _on_Next_pressed():
-	step + 1
+	step =+ 1
 	pass
 
 func Turn_LanguageSetup():
