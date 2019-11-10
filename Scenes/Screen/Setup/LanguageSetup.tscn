@@ -41,7 +41,7 @@ scale = Vector2( 0.978415, 1.08994 )
 frames = SubResource( 1 )
 animation = "English"
 
-[node name="Language" type="Sprite" parent="."]
+[node name="Scroll" type="Sprite" parent="."]
 texture = ExtResource( 4 )
 centered = false
 __meta__ = {
@@ -49,6 +49,7 @@ __meta__ = {
 }
 
 [node name="Languages" type="ScrollContainer" parent="."]
+editor/display_folded = true
 margin_left = 560.0
 margin_top = 252.0
 margin_right = 720.0
