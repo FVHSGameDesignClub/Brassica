@@ -102,5 +102,5 @@ custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 text = "한국어"
 flat = true
 [connection signal="pressed" from="Languages/HBoxContainer/VBOX/English" to="." method="_on_English_pressed"]
-[connection signal="pressed" from="Languages/HBoxContainer/VBOX/Spanish" to="." method="_on_Espaol_pressed"]
+[connection signal="pressed" from="Languages/HBoxContainer/VBOX/Spanish" to="." method="_on_Spanish_pressed"]
 [connection signal="pressed" from="Languages/HBoxContainer/VBOX/Korean" to="." method="_on_Korean_pressed"]
