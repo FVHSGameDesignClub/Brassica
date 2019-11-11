@@ -1,20 +1,21 @@
 extends Node2D
 
-var SelectedLanguage = "English"
+var LANG = "English"
 
 func _ready():
 	pass
 
-func _on_English_pressed():
-	SelectedLanguage = "English" 
-	pass
+func _process(delta):
+	$Banner.play(LANG)
 
+func _on_English_pressed(): 
+	LANG = "English"
+	pass
 
 func _on_Spanish_pressed():
-	SelectedLanguage = "Spanish"
+	LANG = "Spanish"
 	pass
 
-
 func _on_Korean_pressed():
-	SelectedLanguage = "Korean"
+	LANG = "Korean"
 	pass
