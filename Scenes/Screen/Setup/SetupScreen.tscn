@@ -1,19 +1,20 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scenes/Screen/Setup/SetupScreen.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Screen/SetupScreen/SetupScreen.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Screen/Setup/TermsAndConditions.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Screen/Setup/SettingUp.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/Screen/Setup/PresentScreen.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/Screen/Setup/LanguageSetup.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Assets/UX/Buttons/SetupButtons/ButtonsPreviousDisabled.png" type="Texture" id=7]
-[ext_resource path="res://Assets/UX/Buttons/SetupButtons/ButtonsPrevious.png" type="Texture" id=8]
-[ext_resource path="res://Assets/UX/Buttons/SetupButtons/ButtonsNext.png" type="Texture" id=9]
+[ext_resource path="res://Scenes/Screen/Setup/AccountSetup.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Screen/Setup/PresentScreen.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Screen/Setup/LanguageSetup.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/UX/Buttons/SetupButtons/ButtonsPreviousDisabled.png" type="Texture" id=8]
+[ext_resource path="res://Assets/UX/Buttons/SetupButtons/ButtonsPrevious.png" type="Texture" id=9]
+[ext_resource path="res://Assets/UX/Buttons/SetupButtons/ButtonsNext.png" type="Texture" id=10]
 
 [sub_resource type="StyleBoxEmpty" id=5]
 
 [sub_resource type="StyleBoxTexture" id=6]
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 region_rect = Rect2( 0, 0, 48, 48 )
 
 [sub_resource type="StyleBoxEmpty" id=4]
@@ -33,9 +34,11 @@ __meta__ = {
 [node name="SettingUp" parent="." instance=ExtResource( 4 )]
 position = Vector2( 0, 1.2605 )
 
-[node name="PresentScreen" parent="." instance=ExtResource( 5 )]
+[node name="AccountSetup" parent="." instance=ExtResource( 5 )]
 
-[node name="LanguageSetup" parent="." instance=ExtResource( 6 )]
+[node name="PresentScreen" parent="." instance=ExtResource( 6 )]
+
+[node name="LanguageSetup" parent="." instance=ExtResource( 7 )]
 
 [node name="Control" type="Control" parent="."]
 margin_right = 40.0
@@ -54,7 +57,7 @@ margin_right = 73.0
 margin_bottom = 54.0
 custom_styles/focus = SubResource( 5 )
 custom_styles/disabled = SubResource( 6 )
-icon = ExtResource( 8 )
+icon = ExtResource( 9 )
 flat = true
 
 [node name="Next" type="Button" parent="Control/HBox"]
@@ -62,7 +65,7 @@ margin_left = 77.0
 margin_right = 137.0
 margin_bottom = 54.0
 custom_styles/focus = SubResource( 4 )
-icon = ExtResource( 9 )
+icon = ExtResource( 10 )
 flat = true
 [connection signal="pressed" from="Control/HBox/Previous" to="." method="_on_Previous_pressed"]
 [connection signal="pressed" from="Control/HBox/Next" to="." method="_on_Next_pressed"]
