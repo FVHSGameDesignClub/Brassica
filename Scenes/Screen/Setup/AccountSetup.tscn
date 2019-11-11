@@ -27,4 +27,4 @@ animations = [ {
 [node name="Banner" type="AnimatedSprite" parent="."]
 position = Vector2( 640, 230 )
 frames = SubResource( 1 )
-animation = "Korean"
+animation = "English"
