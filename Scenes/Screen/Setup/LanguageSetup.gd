@@ -5,8 +5,8 @@ var LANG = "English"
 func _ready():
 	pass
 
-func _process(delta):
-	$Banner.play(LANG)
+#func _process(delta):
+#	$Banner.play(LANG)
 
 func _on_English_pressed(): 
 	LANG = "English"

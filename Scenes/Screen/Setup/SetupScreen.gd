@@ -1,14 +1,17 @@
 extends Node2D
 
+signal LangSelection
+
 var step = 0
 
-var LANGUAGE = "English"
+
 
 func _ready():
-	
 	pass
 	
 func _process(delta):
+	var LANGUAGE = get_node("LanguageSetup").LANG
+	
 	if step == 0:
 		Turn_LanguageSetup()
 
@@ -20,22 +23,19 @@ func _process(delta):
 		
 	elif step == 3:
 		Turn_SettingUp()
-		
 	pass
 	
+	
+	$LanguageSetup/Banner.play(LANGUAGE)
 	$PresentScreen/Banner.play(LANGUAGE)
-	
 	$TermsAndConditions/Banner.play(LANGUAGE)
-	
 	$SettingUp/Banner.play(LANGUAGE)
-
 
 func _on_Next_pressed():
 	step += 1
 
 func _on_Previous_pressed():
 	step -= 1
-
 
 func Turn_LanguageSetup():
 	$PresentScreen.hide()
@@ -44,7 +44,6 @@ func Turn_LanguageSetup():
 	$LanguageSetup.show()
 	
 	$Control/HBox/Previous.hide()
-	
 	pass
 
 func Turn_PresentScreen():
