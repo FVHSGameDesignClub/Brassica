@@ -3,11 +3,10 @@ extends Node2D
 var step = 0
 var s = 0
 
-var ENGLISH = "English"
-var SPANISH = "Spanish"
-var KOREAN = "Korean"
 
 func _ready():
+	get_node("LanguageSetup").get("LANGUAGE")
+	
 	pass
 	
 func _process(delta):
@@ -16,6 +15,8 @@ func _process(delta):
 	elif step == 1:
 		Turn_PresentScreen()
 	elif step == 2:
+		Turn_TermsAndConditions()
+	elif step == 3:
 		Turn_SettingUp()
 	pass
 	
@@ -29,18 +30,28 @@ func _on_Previous_pressed():
 func Turn_LanguageSetup():
 	$PresentScreen.hide()
 	$SettingUp.hide()
+	$TermsAndConditions.hide()
 	$LanguageSetup.show()
 	$Control/HBox/Previous.hide()
 	
 func Turn_PresentScreen():
 	$LanguageSetup.hide()
 	$SettingUp.hide()
+	$TermsAndConditions.hide()
 	$PresentScreen.show()
+	$Control/HBox/Previous.show()
+	
+func Turn_TermsAndConditions():
+	$LanguageSetup.hide()
+	$SettingUp.hide()
+	$PresentScreen.hide()
+	$TermsAndConditions.show()
 	$Control/HBox/Previous.show()
 	
 func Turn_SettingUp():
 	$LanguageSetup.hide()
 	$PresentScreen.hide()
+	$TermsAndConditions.hide()
 	$SettingUp.show()
 	$SettingUp/Animation.play("default")
 	$Control.hide()

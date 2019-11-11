@@ -5,7 +5,6 @@
 [ext_resource path="res://Scenes/Screen/SplashScreen.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Frame/Frame.tscn" type="PackedScene" id=4]
 
-
 [node name="Main" type="Node2D"]
 
 [node name="MainScreen" parent="." instance=ExtResource( 1 )]
