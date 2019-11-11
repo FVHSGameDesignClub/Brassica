@@ -1,14 +1,16 @@
 extends Node2D
 
 var step = 0
-var s = 0
 
 var LANGUAGE = "English"
 
 func _ready():
+	
 	pass
 	
 func _process(delta):
+	get_node("LanguageSetup").SelectedLanguage = LANGUAGE
+	
 	if step == 0:
 		Turn_LanguageSetup()
 	elif step == 1:
@@ -17,6 +19,12 @@ func _process(delta):
 		Turn_TermsAndConditions()
 	elif step == 3:
 		Turn_SettingUp()
+	
+	$LanguageSetup/Banner.play(LANGUAGE)
+	$PresentScreen/Banner.play(LANGUAGE)
+	$TermsAndConditions/Banner.play(LANGUAGE)
+	$SettingUp/Banner.play(LANGUAGE)
+	
 	pass
 	
 func _on_Next_pressed():
@@ -31,25 +39,16 @@ func Turn_LanguageSetup():
 	$SettingUp.hide()
 	$TermsAndConditions.hide()
 	$LanguageSetup.show()
-	
-	if get_node("LanguageSetup")._on_English_pressed():
-		LANGUAGE = "English"
-	if get_node("LanguageSetup")._on_Spanish_pressed():
-		LANGUAGE = "Spanish"
-	if get_node("LanguageSetup")._on_Korean_pressed():
-		LANGUAGE = "Korean"
-	
-	$LanguageSetup/Banner.play(LANGUAGE)
-	
 	$Control/HBox/Previous.hide()
+	pass
 	
 func Turn_PresentScreen():
 	$LanguageSetup.hide()
 	$SettingUp.hide()
 	$TermsAndConditions.hide()
 	$PresentScreen.show()
-	$PresentScreen/Banner.play(LANGUAGE)
 	$Control/HBox/Previous.show()
+	pass
 	
 func Turn_TermsAndConditions():
 	$LanguageSetup.hide()
@@ -57,6 +56,7 @@ func Turn_TermsAndConditions():
 	$PresentScreen.hide()
 	$TermsAndConditions.show()
 	$Control/HBox/Previous.show()
+	pass
 	
 func Turn_SettingUp():
 	$LanguageSetup.hide()
@@ -65,3 +65,7 @@ func Turn_SettingUp():
 	$SettingUp.show()
 	$SettingUp/Animation.play("default")
 	$Control.hide()
+	pass
+	
+func SaveSettings():
+	pass
