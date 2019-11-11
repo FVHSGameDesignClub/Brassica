@@ -2,13 +2,12 @@ extends Node2D
 
 var step = 0
 
-onready var LANGUAGE = get_node("LanguageSetup").LANG
+var LANGUAGE = "English"
 
 func _ready():
 	pass
 	
 func _process(delta):
-	
 	if step == 0:
 		Turn_LanguageSetup()
 	elif step == 1:
@@ -17,9 +16,14 @@ func _process(delta):
 		Turn_TermsAndConditions()
 	elif step == 3:
 		Turn_SettingUp()
-	
-	
 	pass
+	
+	if get_node("LanguageSetup")._on_English_pressed():
+		LANGUAGE = "English"
+	if get_node("LanguageSetup")._on_Spanish_pressed():
+		LANGUAGE = "Spanish"
+	if get_node("LanguageSetup")._on_Korean_pressed():
+		LANGUAGE = "Korean"
 	
 func _on_Next_pressed():
 	step += 1
