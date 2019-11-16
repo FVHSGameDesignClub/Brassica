@@ -17,7 +17,6 @@ _global_script_class_icons={
 
 config/name="Brassica"
 run/main_scene="res://Scenes/Game.tscn"
-run/disable_stdout=true
 boot_splash/image="res://Splash.png"
 config/icon="res://icon.png"
 
@@ -37,7 +36,7 @@ convert_text_resources_to_binary_on_export=true
 
 [locale]
 
-locale_filter=[ 0, [ "en", "es", "ko" ] ]
+locale_filter=[ 1, [ "en", "es", "ko" ] ]
 
 [rendering]
 
