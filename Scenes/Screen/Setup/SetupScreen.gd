@@ -4,8 +4,6 @@ signal LangSelection
 
 var step = 0
 
-
-
 func _ready():
 	pass
 	
@@ -19,10 +17,10 @@ func _process(delta):
 		Turn_AccountSetup()
 		
 	elif step == 2:
-		Turn_PresentScreen()
+		Turn_TermsAndConditions()
 		
 	elif step == 3:
-		Turn_TermsAndConditions()
+		Turn_PresentScreen()
 		
 	elif step == 4:
 		Turn_SettingUp()
@@ -60,14 +58,6 @@ func Turn_AccountSetup():
 	
 	$Control/HBox/Previous.show()
 	pass
-
-func Turn_PresentScreen():
-	$LanguageSetup.hide()
-	$AccountSetup.hide()
-	$TermsAndConditions.hide()
-	$SettingUp.hide()
-	$PresentScreen.show()
-	pass
 	
 func Turn_TermsAndConditions():
 	$LanguageSetup.hide()
@@ -75,6 +65,14 @@ func Turn_TermsAndConditions():
 	$PresentScreen.hide()
 	$SettingUp.hide()
 	$TermsAndConditions.show()
+	pass
+
+func Turn_PresentScreen():
+	$LanguageSetup.hide()
+	$AccountSetup.hide()
+	$TermsAndConditions.hide()
+	$SettingUp.hide()
+	$PresentScreen.show()
 	pass
 	
 func Turn_SettingUp():

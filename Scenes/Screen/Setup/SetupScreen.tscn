@@ -2,22 +2,22 @@
 
 [ext_resource path="res://Scenes/Screen/Setup/SetupScreen.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Screen/SetupScreen/SetupScreen.png" type="Texture" id=2]
-[ext_resource path="res://Scenes/Screen/Setup/TermsAndConditions.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Screen/Setup/SettingUp.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/Screen/Setup/AccountSetup.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/Screen/Setup/PresentScreen.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Screen/Setup/SettingUp.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Screen/Setup/PresentScreen.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Screen/Setup/TermsAndConditions.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Screen/Setup/AccountSetup.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Screen/Setup/LanguageSetup.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Assets/UX/Buttons/SetupButtons/ButtonsPreviousDisabled.png" type="Texture" id=8]
 [ext_resource path="res://Assets/UX/Buttons/SetupButtons/ButtonsPrevious.png" type="Texture" id=9]
 [ext_resource path="res://Assets/UX/Buttons/SetupButtons/ButtonsNext.png" type="Texture" id=10]
 
-[sub_resource type="StyleBoxEmpty" id=5]
+[sub_resource type="StyleBoxEmpty" id=1]
 
-[sub_resource type="StyleBoxTexture" id=6]
+[sub_resource type="StyleBoxTexture" id=2]
 texture = ExtResource( 8 )
 region_rect = Rect2( 0, 0, 48, 48 )
 
-[sub_resource type="StyleBoxEmpty" id=4]
+[sub_resource type="StyleBoxEmpty" id=3]
 
 [node name="SetupScreen" type="Node2D"]
 script = ExtResource( 1 )
@@ -29,14 +29,14 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="TermsAndConditions" parent="." instance=ExtResource( 3 )]
-
-[node name="SettingUp" parent="." instance=ExtResource( 4 )]
+[node name="SettingUp" parent="." instance=ExtResource( 3 )]
 position = Vector2( 0, 1.2605 )
 
-[node name="AccountSetup" parent="." instance=ExtResource( 5 )]
+[node name="PresentScreen" parent="." instance=ExtResource( 4 )]
 
-[node name="PresentScreen" parent="." instance=ExtResource( 6 )]
+[node name="TermsAndConditions" parent="." instance=ExtResource( 5 )]
+
+[node name="AccountSetup" parent="." instance=ExtResource( 6 )]
 
 [node name="LanguageSetup" parent="." instance=ExtResource( 7 )]
 
@@ -55,8 +55,8 @@ alignment = 1
 margin_left = 13.0
 margin_right = 73.0
 margin_bottom = 54.0
-custom_styles/focus = SubResource( 5 )
-custom_styles/disabled = SubResource( 6 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
 icon = ExtResource( 9 )
 flat = true
 
@@ -64,7 +64,7 @@ flat = true
 margin_left = 77.0
 margin_right = 137.0
 margin_bottom = 54.0
-custom_styles/focus = SubResource( 4 )
+custom_styles/focus = SubResource( 3 )
 icon = ExtResource( 10 )
 flat = true
 [connection signal="pressed" from="Control/HBox/Previous" to="." method="_on_Previous_pressed"]
