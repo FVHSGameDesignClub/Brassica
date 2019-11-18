@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/234s.png-51903dfb13827e4831baebb8cc9be598.stex"
+path="res://.import/118F.png-097f10d49c0d4cf558941753131ca280.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Screen/SetupScreen/Account/Type/234s.png"
-dest_files=[ "res://.import/234s.png-51903dfb13827e4831baebb8cc9be598.stex" ]
+source_file="res://Assets/Screen/SetupScreen/Account/Type/118F.png"
+dest_files=[ "res://.import/118F.png-097f10d49c0d4cf558941753131ca280.stex" ]
 
 [params]
 
