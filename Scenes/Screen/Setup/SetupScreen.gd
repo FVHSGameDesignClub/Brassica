@@ -1,7 +1,5 @@
 extends Node2D
 
-signal LangSelection
-
 var step = 0
 
 func _ready():
@@ -24,14 +22,19 @@ func _process(delta):
 		
 	elif step == 4:
 		Turn_SettingUp()
-	pass
-	
 	
 	$LanguageSetup/Banner.play(LANGUAGE)
 	$AccountSetup/Banner.play(LANGUAGE)
 	$PresentScreen/Banner.play(LANGUAGE)
 	$TermsAndConditions/Banner.play(LANGUAGE)
 	$SettingUp/Banner.play(LANGUAGE)
+	
+	if LANGUAGE == "English":
+		$AccountSetup.Label_English()
+	elif LANGUAGE == "Spanish":
+		$AccountSetup.Label_Spanish()
+	elif LANGUAGE == "Korean":
+		$AccountSetup.Label_Korean()
 
 func _on_Next_pressed():
 	step += 1
@@ -47,7 +50,6 @@ func Turn_LanguageSetup():
 	$LanguageSetup.show()
 	
 	$Control/HBox/Previous.hide()
-	pass
 
 func Turn_AccountSetup():
 	$LanguageSetup.hide()
@@ -57,7 +59,6 @@ func Turn_AccountSetup():
 	$AccountSetup.show()
 	
 	$Control/HBox/Previous.show()
-	pass
 	
 func Turn_TermsAndConditions():
 	$LanguageSetup.hide()
@@ -65,7 +66,6 @@ func Turn_TermsAndConditions():
 	$PresentScreen.hide()
 	$SettingUp.hide()
 	$TermsAndConditions.show()
-	pass
 
 func Turn_PresentScreen():
 	$LanguageSetup.hide()
@@ -73,7 +73,6 @@ func Turn_PresentScreen():
 	$TermsAndConditions.hide()
 	$SettingUp.hide()
 	$PresentScreen.show()
-	pass
 	
 func Turn_SettingUp():
 	$LanguageSetup.hide()
@@ -84,7 +83,6 @@ func Turn_SettingUp():
 	$SettingUp/Animation.play("default")
 	
 	$Control.hide()
-	pass
 	
 func SaveSettings():
 	pass
