@@ -32,6 +32,7 @@ font_path = "res://Assets/Fonts/OnIGothic/OnI.ttf"
 
 [sub_resource type="DynamicFont" id=4]
 size = 15
+outline_color = Color( 0, 0, 0, 1 )
 font_data = SubResource( 3 )
 
 [node name="LanguageSetup" type="Node2D"]
@@ -74,6 +75,7 @@ rect_min_size = Vector2( 160, 0 )
 custom_styles/focus = SubResource( 2 )
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 text = "English"
 flat = true
@@ -86,6 +88,7 @@ rect_min_size = Vector2( 160, 0 )
 custom_styles/focus = SubResource( 2 )
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 text = "Español"
 flat = true
@@ -98,9 +101,16 @@ rect_min_size = Vector2( 160, 0 )
 custom_styles/focus = SubResource( 2 )
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 text = "한국어"
 flat = true
+[connection signal="focus_entered" from="Languages/HBoxContainer/VBOX/English" to="." method="_on_English_focus_entered"]
+[connection signal="focus_exited" from="Languages/HBoxContainer/VBOX/English" to="." method="_on_English_focus_exited"]
 [connection signal="pressed" from="Languages/HBoxContainer/VBOX/English" to="." method="_on_English_pressed"]
+[connection signal="focus_entered" from="Languages/HBoxContainer/VBOX/Spanish" to="." method="_on_Spanish_focus_entered"]
+[connection signal="focus_exited" from="Languages/HBoxContainer/VBOX/Spanish" to="." method="_on_Spanish_focus_exited"]
 [connection signal="pressed" from="Languages/HBoxContainer/VBOX/Spanish" to="." method="_on_Spanish_pressed"]
+[connection signal="focus_entered" from="Languages/HBoxContainer/VBOX/Korean" to="." method="_on_Korean_focus_entered"]
+[connection signal="focus_exited" from="Languages/HBoxContainer/VBOX/Korean" to="." method="_on_Korean_focus_exited"]
 [connection signal="pressed" from="Languages/HBoxContainer/VBOX/Korean" to="." method="_on_Korean_pressed"]
