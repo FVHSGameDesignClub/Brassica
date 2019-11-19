@@ -1,9 +1,9 @@
 [gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Scenes/Screen/Setup/AccountSetup.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Screen/SetupScreen/Account/strings/Spanish.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Screen/SetupScreen/Account/strings/English.png" type="Texture" id=3]
-[ext_resource path="res://Assets/Screen/SetupScreen/Account/strings/Korean.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Screen/SetupScreen/Account/strings/English.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Screen/SetupScreen/Account/strings/Korean.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Screen/SetupScreen/Account/strings/Spanish.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Screen/SetupScreen/Account/Type/182F.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Screen/SetupScreen/Account/Type/182N.png" type="Texture" id=6]
 [ext_resource path="res://FontSets/Setup/AccountSettingFont.tres" type="DynamicFont" id=7]
@@ -17,17 +17,17 @@
 animations = [ {
 "frames": [ ExtResource( 2 ) ],
 "loop": true,
-"name": "Spanish",
+"name": "English",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
-"name": "English",
+"name": "Korean",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ) ],
 "loop": true,
-"name": "Korean",
+"name": "Spanish",
 "speed": 5.0
 } ]
 
@@ -39,35 +39,35 @@ outline_color = Color( 0, 0, 0, 1 )
 extra_spacing_top = 4
 font_data = SubResource( 2 )
 
-[sub_resource type="StyleBoxTexture" id=22]
+[sub_resource type="StyleBoxTexture" id=4]
 texture = ExtResource( 5 )
 region_rect = Rect2( 0, 0, 182, 26 )
 
-[sub_resource type="StyleBoxTexture" id=23]
+[sub_resource type="StyleBoxTexture" id=5]
 texture = ExtResource( 6 )
 region_rect = Rect2( 0, 0, 182, 26 )
 
-[sub_resource type="StyleBoxTexture" id=24]
+[sub_resource type="StyleBoxTexture" id=6]
 texture = ExtResource( 9 )
 region_rect = Rect2( 0, 0, 118, 26 )
 
-[sub_resource type="StyleBoxTexture" id=25]
+[sub_resource type="StyleBoxTexture" id=7]
 texture = ExtResource( 10 )
 region_rect = Rect2( 0, 0, 118, 26 )
 
-[sub_resource type="StyleBoxTexture" id=26]
+[sub_resource type="StyleBoxTexture" id=8]
 texture = ExtResource( 9 )
 region_rect = Rect2( 0, 0, 118, 26 )
 
-[sub_resource type="StyleBoxTexture" id=27]
+[sub_resource type="StyleBoxTexture" id=9]
 texture = ExtResource( 10 )
 region_rect = Rect2( 0, 0, 118, 26 )
 
-[sub_resource type="StyleBoxTexture" id=28]
+[sub_resource type="StyleBoxTexture" id=10]
 texture = ExtResource( 11 )
 region_rect = Rect2( 0, 0, 240, 26 )
 
-[sub_resource type="StyleBoxTexture" id=29]
+[sub_resource type="StyleBoxTexture" id=11]
 texture = ExtResource( 12 )
 region_rect = Rect2( 0, 0, 240, 26 )
 
@@ -95,6 +95,7 @@ rect_min_size = Vector2( 0, 116 )
 alignment = 2
 
 [node name="Labels" type="VBoxContainer" parent="Center/HBoxContainer"]
+editor/display_folded = true
 margin_right = 106.0
 margin_bottom = 140.0
 
@@ -144,11 +145,13 @@ margin_bottom = 140.0
 rect_min_size = Vector2( 240, 116 )
 
 [node name="Alignment" type="HBoxContainer" parent="Center/HBoxContainer/VBoxContainer"]
+editor/display_folded = true
 margin_right = 240.0
 margin_bottom = 56.0
 rect_min_size = Vector2( 240, 56 )
 
 [node name="Username" type="VBoxContainer" parent="Center/HBoxContainer/VBoxContainer/Alignment"]
+editor/display_folded = true
 margin_right = 182.0
 margin_bottom = 56.0
 rect_min_size = Vector2( 182, 56 )
@@ -157,22 +160,24 @@ rect_min_size = Vector2( 182, 56 )
 margin_right = 182.0
 margin_bottom = 26.0
 rect_min_size = Vector2( 182, 26 )
-custom_styles/focus = SubResource( 22 )
-custom_styles/normal = SubResource( 23 )
+custom_styles/focus = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
 custom_fonts/font = ExtResource( 7 )
 custom_colors/cursor_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+max_length = 15
 
 [node name="AccountName" type="LineEdit" parent="Center/HBoxContainer/VBoxContainer/Alignment/Username"]
 margin_top = 30.0
 margin_right = 182.0
 margin_bottom = 56.0
 rect_min_size = Vector2( 182, 26 )
-custom_styles/focus = SubResource( 22 )
-custom_styles/normal = SubResource( 23 )
+custom_styles/focus = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
 custom_fonts/font = ExtResource( 7 )
 custom_colors/cursor_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+max_length = 15
 
 [node name="Player" type="Sprite" parent="Center/HBoxContainer/VBoxContainer/Alignment/Username"]
 position = Vector2( 240, 0 )
@@ -190,8 +195,8 @@ rect_min_size = Vector2( 240, 26 )
 margin_right = 118.0
 margin_bottom = 26.0
 rect_min_size = Vector2( 118, 26 )
-custom_styles/focus = SubResource( 24 )
-custom_styles/normal = SubResource( 25 )
+custom_styles/focus = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
 custom_fonts/font = ExtResource( 7 )
 custom_colors/cursor_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -202,8 +207,8 @@ margin_left = 122.0
 margin_right = 240.0
 margin_bottom = 26.0
 rect_min_size = Vector2( 118, 26 )
-custom_styles/focus = SubResource( 26 )
-custom_styles/normal = SubResource( 27 )
+custom_styles/focus = SubResource( 8 )
+custom_styles/normal = SubResource( 9 )
 custom_fonts/font = ExtResource( 7 )
 custom_colors/cursor_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -214,8 +219,9 @@ margin_top = 90.0
 margin_right = 240.0
 margin_bottom = 114.0
 rect_min_size = Vector2( 240, 24 )
-custom_styles/focus = SubResource( 28 )
-custom_styles/normal = SubResource( 29 )
+custom_styles/focus = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
 custom_fonts/font = ExtResource( 7 )
 custom_colors/cursor_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+max_length = 23
