@@ -1,11 +1,5 @@
 extends Node2D
 
-func _ready():
-	pass
-
-func _process(delta):
-	pass
-
 func Label_English():
 	$Center/HBoxContainer/Labels/Fullname.set_text("Full name:")
 	$Center/HBoxContainer/Labels/Accountname.set_text("Account name:")
