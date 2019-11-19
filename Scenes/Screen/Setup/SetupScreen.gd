@@ -31,10 +31,13 @@ func _process(delta):
 	
 	if LANGUAGE == "English":
 		$AccountSetup.Label_English()
+		$TermsAndConditions.Label_English()
 	elif LANGUAGE == "Spanish":
 		$AccountSetup.Label_Spanish()
+		$TermsAndConditions.Label_Spanish()
 	elif LANGUAGE == "Korean":
 		$AccountSetup.Label_Korean()
+		$TermsAndConditions.Label_Korean()
 
 func _on_Next_pressed():
 	step += 1
