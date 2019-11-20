@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scenes/Screen/Setup/LanguageSetup.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Screen/SetupScreen/Language/String/Spanish.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Screen/SetupScreen/Language/String/English.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Screen/SetupScreen/Language/String/English.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Screen/SetupScreen/Language/String/Spanish.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Screen/SetupScreen/Language/String/Korean.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Screen/SetupScreen/Language/Language.png" type="Texture" id=5]
 
@@ -10,12 +10,12 @@
 animations = [ {
 "frames": [ ExtResource( 2 ) ],
 "loop": true,
-"name": "Spanish",
+"name": "English",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
-"name": "English",
+"name": "Spanish",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ) ],
@@ -28,7 +28,7 @@ animations = [ {
 bg_color = Color( 0, 0.247059, 1, 1 )
 
 [sub_resource type="DynamicFontData" id=3]
-font_path = "res://Assets/Fonts/OnIGothic/OnI.ttf"
+font_path = "res://Assets/Fonts/NotoSansKR-Regular.otf"
 
 [sub_resource type="DynamicFont" id=4]
 size = 15
