@@ -1,35 +1,54 @@
 extends Node2D
 
+#var allowed_characters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+#var allowed_special_characters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "!", "@"]
+
+func _process(delta):
+	pass
+
 func Label_English():
-	$Center/HBoxContainer/Labels/Fullname.set_text("Full name:")
-	$Center/HBoxContainer/Labels/Accountname.set_text("Account name:")
-	$Center/HBoxContainer/Labels/Password.set_text("Password:")
-	$Center/HBoxContainer/Labels/Hint.set_text("Hint:")
+	$Res/Center/HBoxContainer/Labels/Fullname.set_text("Full name:")
+	$Res/Center/HBoxContainer/Labels/Accountname.set_text("Account name:")
+	$Res/Center/HBoxContainer/Labels/Password.set_text("Password:")
+	$Res/Center/HBoxContainer/Labels/Hint.set_text("Hint:")
 	
-	$Center/HBoxContainer/VBoxContainer/Alignment/Username/FullName.set_placeholder("full name")
-	$Center/HBoxContainer/VBoxContainer/Alignment/Username/AccountName.set_placeholder("account name")
-	$Center/HBoxContainer/VBoxContainer/Password/NewPassword.set_placeholder("new password")
-	$Center/HBoxContainer/VBoxContainer/Password/Verify.set_placeholder("verify")
-	$Center/HBoxContainer/VBoxContainer/Hint.set_placeholder("option")
+	$Res/Center/HBoxContainer/VBoxContainer/Alignment/Username/FullName.set_placeholder("full name")
+	$Res/Center/HBoxContainer/VBoxContainer/Alignment/Username/AccountName.set_placeholder("account name")
+	$Res/Center/HBoxContainer/VBoxContainer/Password/NewPassword.set_placeholder("new password")
+	$Res/Center/HBoxContainer/VBoxContainer/Password/Verify.set_placeholder("verify")
+	$Res/Center/HBoxContainer/VBoxContainer/Hint.set_placeholder("option")
+	
+	$Res/PasswordNotMatch.set_text("Passwords do not match.")
+	$Res/ANRes.set_text("Account name only accepts a~z and 0~9.")
+	$Res/PWRes.set_text("Password only accepts A~Z, a~z, 0~9 and special characters.")
 	
 func Label_Spanish():
-	$Center/HBoxContainer/Labels/Fullname.set_text("Nombre completo:")
-	$Center/HBoxContainer/Labels/Accountname.set_text("Nombre de la cuenta:")
-	$Center/HBoxContainer/Labels/Password.set_text("Contraseña:")
-	$Center/HBoxContainer/Labels/Hint.set_text("Indicadión:")
-	$Center/HBoxContainer/VBoxContainer/Alignment/Username/FullName.set_placeholder("nombre completo")
-	$Center/HBoxContainer/VBoxContainer/Alignment/Username/AccountName.set_placeholder("nombre de la cuenta")
-	$Center/HBoxContainer/VBoxContainer/Password/NewPassword.set_placeholder("nueva contraseña")
-	$Center/HBoxContainer/VBoxContainer/Password/Verify.set_placeholder("verificar")
-	$Center/HBoxContainer/VBoxContainer/Hint.set_placeholder("opcional")
+	$Res/Center/HBoxContainer/Labels/Fullname.set_text("Nombre completo:")
+	$Res/Center/HBoxContainer/Labels/Accountname.set_text("Nombre de la cuenta:")
+	$Res/Center/HBoxContainer/Labels/Password.set_text("Contraseña:")
+	$Res/Center/HBoxContainer/Labels/Hint.set_text("Indicadión:")
+	$Res/Center/HBoxContainer/VBoxContainer/Alignment/Username/FullName.set_placeholder("nombre completo")
+	$Res/Center/HBoxContainer/VBoxContainer/Alignment/Username/AccountName.set_placeholder("nombre de la cuenta")
+	$Res/Center/HBoxContainer/VBoxContainer/Password/NewPassword.set_placeholder("nueva contraseña")
+	$Res/Center/HBoxContainer/VBoxContainer/Password/Verify.set_placeholder("verificar")
+	$Res/Center/HBoxContainer/VBoxContainer/Hint.set_placeholder("opcional")
+	
+	$Res/PasswordNotMatch.set_text("Las contraseñas no coinciden.")
+	$Res/ANRes.set_text("El nombre de la cuenta solo acepta a~z y 0~9.")
+	$Res/PWRes.set_text("La contraseña solo acepta A~Z, a~z, 0~9 y caracteres especiales.")
 	
 func Label_Korean():
-	$Center/HBoxContainer/Labels/Fullname.set_text("전체 이름:")
-	$Center/HBoxContainer/Labels/Accountname.set_text("계정 이름:")
-	$Center/HBoxContainer/Labels/Password.set_text("암호:")
-	$Center/HBoxContainer/Labels/Hint.set_text("힌트:")
-	$Center/HBoxContainer/VBoxContainer/Alignment/Username/FullName.set_placeholder("전체 이름")
-	$Center/HBoxContainer/VBoxContainer/Alignment/Username/AccountName.set_placeholder("계정 이름")
-	$Center/HBoxContainer/VBoxContainer/Password/NewPassword.set_placeholder("새로운 암호")
-	$Center/HBoxContainer/VBoxContainer/Password/Verify.set_placeholder("확인")
-	$Center/HBoxContainer/VBoxContainer/Hint.set_placeholder("힌트")
+	$Res/Center/HBoxContainer/Labels/Fullname.set_text("전체 이름:")
+	$Res/Center/HBoxContainer/Labels/Accountname.set_text("계정 이름:")
+	$Res/Center/HBoxContainer/Labels/Password.set_text("암호:")
+	$Res/Center/HBoxContainer/Labels/Hint.set_text("힌트:")
+	
+	$Res/Center/HBoxContainer/VBoxContainer/Alignment/Username/FullName.set_placeholder("전체 이름")
+	$Res/Center/HBoxContainer/VBoxContainer/Alignment/Username/AccountName.set_placeholder("계정 이름")
+	$Res/Center/HBoxContainer/VBoxContainer/Password/NewPassword.set_placeholder("새로운 암호")
+	$Res/Center/HBoxContainer/VBoxContainer/Password/Verify.set_placeholder("확인")
+	$Res/Center/HBoxContainer/VBoxContainer/Hint.set_placeholder("힌트")
+	
+	$Res/PasswordNotMatch.set_text("비밀번호가 일치하지 않습니다.")
+	$Res/ANRes.set_text("계정이름은 알파벳 소문자와 0~9 숫자만 허용합니다.")
+	$Res/PWRes.set_text("비밀번호는 알파벳 대소문자와, 0~9 숫자, 특수문자만 허용합니다.")
