@@ -100,8 +100,11 @@ func Turn_SettingUp():
 	$Control.hide()
 	
 func SaveSettings():
-	
+	SaveLanguageSetup()
+	SaveComputerInformation()
+
+func SaveLanguageSetup():
 	pass
 
-func SaveComputerAccount():
+func SaveComputerInformation():
 	pass
