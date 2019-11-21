@@ -104,7 +104,27 @@ func SaveSettings():
 	SaveComputerInformation()
 
 func SaveLanguageSetup():
-	pass
+	var LanguageSetting = File.new()
+
+var userdata = {
+	fullname="",
+	accountname="",
+	password="",
+	hint=""
+}
 
 func SaveComputerInformation():
-	pass
+	var UserData = File.new()
+	UserData.open("user://")
+	UserData.make_dir("data")
+	UserData.open("user://data/user.data", File.WRITE)
+	
+	var data = userdata
+	
+	data.fullname = get_node("AccountSetup/Res/Center/HBoxContainer/VBoxContainer/Alignment/Username/FullName").text
+	data.accountname = get_node("AccountSetup/Res/Center/HBoxContainer/VBoxContainer/Alignment/Username/AccountName").text
+	data.password = get_node("AccountSetup/Res/Center/HBoxContainer/VBoxContainer/Password/NewPassword").text
+	data.hint = get_node("AccountSetup/Res/Center/HBoxContainer/VBoxContainer/Hint").text
+	
+	UserData.store_line(data.to_json())
+	UserData.close()
