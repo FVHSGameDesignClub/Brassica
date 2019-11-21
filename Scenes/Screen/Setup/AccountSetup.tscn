@@ -280,5 +280,3 @@ custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color = Color( 0.266667, 0.266667, 0.266667, 1 )
 text = "Password must include only A~Z, a~z, 0~9, !, @"
 align = 1
-[connection signal="text_changed" from="Res/Center/HBoxContainer/VBoxContainer/Alignment/Username/AccountName" to="." method="_on_AccountName_text_changed"]
-[connection signal="text_changed" from="Res/Center/HBoxContainer/VBoxContainer/Password/NewPassword" to="." method="_on_NewPassword_text_changed"]
