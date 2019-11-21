@@ -2,6 +2,9 @@ extends Node2D
 
 var step = 0
 
+var settings = ConfigFile.new()
+var user = ConfigFile.new()
+
 func _process(delta):
 	
 	var newpassword = get_node("AccountSetup/Res/Center/HBoxContainer/VBoxContainer/Password/NewPassword").text
@@ -61,6 +64,7 @@ func Turn_LanguageSetup():
 	$LanguageSetup.show()
 	
 	$Control/HBox/Previous.hide()
+	$Control/HBox/Next.show()
 
 func Turn_AccountSetup():
 	$LanguageSetup.hide()
@@ -93,4 +97,33 @@ func Turn_SettingUp():
 	$SettingUp.show()
 	$SettingUp/Animation.play("default")
 	
+	SetupData()
+	SaveConfig()
+	SaveUserdata()
+	
 	$Control.hide()
+
+func SaveConfig():
+	SaveSetup("Display", "WindowWidth", "1280")
+	SaveSetup("Display", "WindowHeight", "720")
+	SaveSetup("Display", "Fullscreen", "false")
+	SaveSetup("Language", "Language", get_node("LanguageSetup").LANG)
+	
+func SaveUserdata():
+	SaveUser("Name", "Fullname", get_node("AccountSetup/Res/Center/HBoxContainer/VBoxContainer/Alignment/Username/FullName").text)
+	SaveUser("Name", "Accountname", get_node("AccountSetup/Res/Center/HBoxContainer/VBoxContainer/Alignment/Username/AccountName").text)
+	SaveUser("Security", "Password", get_node("AccountSetup/Res/Center/HBoxContainer/VBoxContainer/Password/NewPassword").text)
+	SaveUser("Security", "Hint", get_node("AccountSetup/Res/Center/HBoxContainer/VBoxContainer/Hint").text)
+
+func SetupData():
+	var dir = Directory.new()
+	dir.open("user://")
+	dir.make_dir("data")
+
+func SaveSetup(section, key, value):
+	settings.set_value(section, key, value)
+	settings.save("user://data/setting.cfg")
+
+func SaveUser(section, key, value):
+	user.set_value(section, key, value)
+	user.save("user://data/user.cfg")
