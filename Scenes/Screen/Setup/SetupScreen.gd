@@ -122,7 +122,7 @@ func SetupData():
 
 func SaveSetup(section, key, value):
 	settings.set_value(section, key, value)
-	settings.save("user://data/setting.cfg")
+	settings.save("user://data/settings.cfg")
 
 func SaveUser(section, key, value):
 	user.set_value(section, key, value)

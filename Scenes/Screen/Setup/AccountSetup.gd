@@ -36,7 +36,7 @@ func Label_Spanish():
 	$Res/PasswordNotMatch.set_text("Las contraseñas no coinciden.")
 	$Res/ANRes.set_text("El nombre de la cuenta solo acepta a~z y 0~9.")
 	$Res/PWRes.set_text("La contraseña solo acepta A~Z, a~z, 0~9 y caracteres especiales.")
-	
+
 func Label_Korean():
 	$Res/Center/HBoxContainer/Labels/Fullname.set_text("전체 이름: ")
 	$Res/Center/HBoxContainer/Labels/Accountname.set_text("계정 이름: ")
