@@ -2,10 +2,15 @@ extends Node2D
 
 var step = 0
 
+
 func _ready():
 	pass
 	
 func _process(delta):
+	
+	var newpassword = get_node("AccountSetup/Res/Center/HBoxContainer/VBoxContainer/Password/NewPassword").text
+	var verify = get_node("AccountSetup/Res/Center/HBoxContainer/VBoxContainer/Password/Verify").text
+	
 	var LANGUAGE = get_node("LanguageSetup").LANG
 	
 	if step == 0:
@@ -38,6 +43,13 @@ func _process(delta):
 	elif LANGUAGE == "Korean":
 		$AccountSetup.Label_Korean()
 		$TermsAndConditions.Label_Korean()
+	
+	if newpassword != verify:
+		$Control/HBox/Next.hide()
+		$AccountSetup/Res/PasswordNotMatch.show()
+	elif newpassword == verify:
+		$Control/HBox/Next.show()
+		$AccountSetup/Res/PasswordNotMatch.hide()
 
 func _on_Next_pressed():
 	step += 1
@@ -88,4 +100,8 @@ func Turn_SettingUp():
 	$Control.hide()
 	
 func SaveSettings():
+	
+	pass
+
+func SaveComputerAccount():
 	pass
