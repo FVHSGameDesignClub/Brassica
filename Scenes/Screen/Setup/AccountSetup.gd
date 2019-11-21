@@ -7,10 +7,10 @@ func _process(delta):
 	pass
 
 func Label_English():
-	$Res/Center/HBoxContainer/Labels/Fullname.set_text("Full name:")
-	$Res/Center/HBoxContainer/Labels/Accountname.set_text("Account name:")
-	$Res/Center/HBoxContainer/Labels/Password.set_text("Password:")
-	$Res/Center/HBoxContainer/Labels/Hint.set_text("Hint:")
+	$Res/Center/HBoxContainer/Labels/Fullname.set_text("Full name: ")
+	$Res/Center/HBoxContainer/Labels/Accountname.set_text("Account name: ")
+	$Res/Center/HBoxContainer/Labels/Password.set_text("Password: ")
+	$Res/Center/HBoxContainer/Labels/Hint.set_text("Hint: ")
 	
 	$Res/Center/HBoxContainer/VBoxContainer/Alignment/Username/FullName.set_placeholder("full name")
 	$Res/Center/HBoxContainer/VBoxContainer/Alignment/Username/AccountName.set_placeholder("account name")
@@ -23,10 +23,10 @@ func Label_English():
 	$Res/PWRes.set_text("Password only accepts A~Z, a~z, 0~9 and special characters.")
 	
 func Label_Spanish():
-	$Res/Center/HBoxContainer/Labels/Fullname.set_text("Nombre completo:")
-	$Res/Center/HBoxContainer/Labels/Accountname.set_text("Nombre de la cuenta:")
-	$Res/Center/HBoxContainer/Labels/Password.set_text("Contraseña:")
-	$Res/Center/HBoxContainer/Labels/Hint.set_text("Indicadión:")
+	$Res/Center/HBoxContainer/Labels/Fullname.set_text("Nombre completo: ")
+	$Res/Center/HBoxContainer/Labels/Accountname.set_text("Nombre de la cuenta: ")
+	$Res/Center/HBoxContainer/Labels/Password.set_text("Contraseña: ")
+	$Res/Center/HBoxContainer/Labels/Hint.set_text("Indicadión: ")
 	$Res/Center/HBoxContainer/VBoxContainer/Alignment/Username/FullName.set_placeholder("nombre completo")
 	$Res/Center/HBoxContainer/VBoxContainer/Alignment/Username/AccountName.set_placeholder("nombre de la cuenta")
 	$Res/Center/HBoxContainer/VBoxContainer/Password/NewPassword.set_placeholder("nueva contraseña")
@@ -38,10 +38,10 @@ func Label_Spanish():
 	$Res/PWRes.set_text("La contraseña solo acepta A~Z, a~z, 0~9 y caracteres especiales.")
 	
 func Label_Korean():
-	$Res/Center/HBoxContainer/Labels/Fullname.set_text("전체 이름:")
-	$Res/Center/HBoxContainer/Labels/Accountname.set_text("계정 이름:")
-	$Res/Center/HBoxContainer/Labels/Password.set_text("암호:")
-	$Res/Center/HBoxContainer/Labels/Hint.set_text("힌트:")
+	$Res/Center/HBoxContainer/Labels/Fullname.set_text("전체 이름: ")
+	$Res/Center/HBoxContainer/Labels/Accountname.set_text("계정 이름: ")
+	$Res/Center/HBoxContainer/Labels/Password.set_text("암호: ")
+	$Res/Center/HBoxContainer/Labels/Hint.set_text("힌트: ")
 	
 	$Res/Center/HBoxContainer/VBoxContainer/Alignment/Username/FullName.set_placeholder("전체 이름")
 	$Res/Center/HBoxContainer/VBoxContainer/Alignment/Username/AccountName.set_placeholder("계정 이름")
