@@ -17,6 +17,7 @@ _global_script_class_icons={
 
 config/name="Brassica"
 run/main_scene="res://Scenes/Game.tscn"
+run/low_processor_mode=true
 boot_splash/image="res://Splash.png"
 config/icon="res://icon.png"
 
