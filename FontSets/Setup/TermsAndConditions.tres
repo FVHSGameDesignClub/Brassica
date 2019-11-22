@@ -4,6 +4,6 @@
 font_path = "res://Assets/Fonts/OnIGothic/OnI.ttf"
 
 [resource]
-size = 17
+size = 15
 outline_color = Color( 0, 0, 0, 1 )
 font_data = SubResource( 1 )
