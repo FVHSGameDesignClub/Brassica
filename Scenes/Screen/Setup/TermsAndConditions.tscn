@@ -2,8 +2,8 @@
 
 [ext_resource path="res://Scenes/Screen/Setup/TermsAndConditions.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Screen/SetupScreen/TermsAndConditions/Strings/English.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Screen/SetupScreen/TermsAndConditions/Strings/Korean.png" type="Texture" id=3]
-[ext_resource path="res://Assets/Screen/SetupScreen/TermsAndConditions/Strings/Spanish.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Screen/SetupScreen/TermsAndConditions/Strings/Spanish.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Screen/SetupScreen/TermsAndConditions/Strings/Korean.png" type="Texture" id=4]
 [ext_resource path="res://FontSets/Setup/TermsAndConditions.tres" type="DynamicFont" id=5]
 
 [sub_resource type="SpriteFrames" id=1]
@@ -15,12 +15,12 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
-"name": "Korean",
+"name": "Spanish",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ) ],
 "loop": true,
-"name": "Spanish",
+"name": "Korean",
 "speed": 5.0
 } ]
 
@@ -34,9 +34,9 @@ animation = "English"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 margin_left = 420.0
-margin_top = 330.0
+margin_top = 280.0
 margin_right = 860.0
-margin_bottom = 580.0
+margin_bottom = 530.0
 rect_min_size = Vector2( 440, 0 )
 alignment = 1
 
