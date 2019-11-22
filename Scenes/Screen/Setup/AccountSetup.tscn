@@ -2,8 +2,8 @@
 
 [ext_resource path="res://Scenes/Screen/Setup/AccountSetup.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Screen/SetupScreen/Account/strings/English.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Screen/SetupScreen/Account/strings/Korean.png" type="Texture" id=3]
-[ext_resource path="res://Assets/Screen/SetupScreen/Account/strings/Spanish.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Screen/SetupScreen/Account/strings/Spanish.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Screen/SetupScreen/Account/strings/Korean.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Screen/SetupScreen/Account/Type/182F.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Screen/SetupScreen/Account/Type/182N.png" type="Texture" id=6]
 [ext_resource path="res://FontSets/Setup/AccountSettingFont.tres" type="DynamicFont" id=7]
@@ -22,12 +22,12 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
-"name": "Korean",
+"name": "Spanish",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ) ],
 "loop": true,
-"name": "Spanish",
+"name": "Korean",
 "speed": 5.0
 } ]
 
