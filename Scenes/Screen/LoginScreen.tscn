@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Assets/UX/InGameBackground/MojaveDay.png" type="Texture" id=1]
+[ext_resource path="res://Assets/UX/Profile/Player.png" type="Texture" id=2]
 
 [node name="LoginScreen" type="Node2D"]
 
@@ -10,3 +11,26 @@ centered = false
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="VerticalCenter" type="HBoxContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 1280, 720 )
+alignment = 1
+
+[node name="HorizontalCenter" type="VBoxContainer" parent="VerticalCenter"]
+margin_right = 1280.0
+margin_bottom = 720.0
+rect_min_size = Vector2( 1280, 720 )
+alignment = 1
+
+[node name="Center" type="HBoxContainer" parent="VerticalCenter/HorizontalCenter"]
+margin_right = 1280.0
+margin_bottom = 720.0
+rect_min_size = Vector2( 1280, 720 )
+alignment = 1
+
+[node name="Profile" type="Sprite" parent="VerticalCenter/HorizontalCenter/Center"]
+position = Vector2( 640, 300 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 2 )
