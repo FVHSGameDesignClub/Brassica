@@ -59,8 +59,6 @@ func _process(delta):
 		$AccountSetup.Label_Korean()
 		$TermsAndConditions.Label_Korean()
 	
-	
-	
 
 func _on_Next_pressed():
 	step += 1
