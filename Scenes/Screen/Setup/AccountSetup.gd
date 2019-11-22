@@ -1,11 +1,5 @@
 extends Node2D
 
-#var allowed_characters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-#var allowed_special_characters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "!", "@"]
-
-func _process(delta):
-	pass
-
 func Label_English():
 	$Res/Center/HBoxContainer/Labels/Fullname.set_text("Full name: ")
 	$Res/Center/HBoxContainer/Labels/Accountname.set_text("Account name: ")
@@ -27,6 +21,7 @@ func Label_Spanish():
 	$Res/Center/HBoxContainer/Labels/Accountname.set_text("Nombre de la cuenta: ")
 	$Res/Center/HBoxContainer/Labels/Password.set_text("Contraseña: ")
 	$Res/Center/HBoxContainer/Labels/Hint.set_text("Indicadión: ")
+	
 	$Res/Center/HBoxContainer/VBoxContainer/Alignment/Username/FullName.set_placeholder("nombre completo")
 	$Res/Center/HBoxContainer/VBoxContainer/Alignment/Username/AccountName.set_placeholder("nombre de la cuenta")
 	$Res/Center/HBoxContainer/VBoxContainer/Password/NewPassword.set_placeholder("nueva contraseña")

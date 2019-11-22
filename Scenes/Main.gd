@@ -10,6 +10,7 @@ func _process(delta):
 	
 	if is_Setup_Over == true:
 		setup_is_over()
+		
 	elif is_Setup_Over == false:
 		pass
 
