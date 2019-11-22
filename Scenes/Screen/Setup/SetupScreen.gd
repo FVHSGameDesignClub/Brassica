@@ -6,7 +6,8 @@ var settings = ConfigFile.new()
 var user = ConfigFile.new()
 
 func _process(delta):
-	
+	var fullname = get_node("AccountSetup/Res/Center/HBoxContainer/VBoxContainer/Alignment/Username/FullName").text
+	var accountname = get_node("AccountSetup/Res/Center/HBoxContainer/VBoxContainer/Alignment/Username/AccountName").text
 	var newpassword = get_node("AccountSetup/Res/Center/HBoxContainer/VBoxContainer/Password/NewPassword").text
 	var verify = get_node("AccountSetup/Res/Center/HBoxContainer/VBoxContainer/Password/Verify").text
 	
@@ -17,6 +18,21 @@ func _process(delta):
 	
 	elif step == 1:
 		Turn_AccountSetup()
+		
+		if !fullname.empty() and !accountname.empty() and !newpassword.empty():
+			$Control/HBox/Next.show()
+			
+			if newpassword != verify:
+				$Control/HBox/Next.hide()
+				$AccountSetup/Res/PasswordNotMatch.show()
+			elif newpassword == verify:
+				$AccountSetup/Res/PasswordNotMatch.hide()
+			
+		if newpassword != verify:
+			$Control/HBox/Next.hide()
+			$AccountSetup/Res/PasswordNotMatch.show()
+		elif newpassword == verify:
+			$AccountSetup/Res/PasswordNotMatch.hide()
 		
 	elif step == 2:
 		Turn_TermsAndConditions()
@@ -43,12 +59,8 @@ func _process(delta):
 		$AccountSetup.Label_Korean()
 		$TermsAndConditions.Label_Korean()
 	
-	if newpassword != verify:
-		$Control/HBox/Next.hide()
-		$AccountSetup/Res/PasswordNotMatch.show()
-	elif newpassword == verify:
-		$Control/HBox/Next.show()
-		$AccountSetup/Res/PasswordNotMatch.hide()
+	
+	
 
 func _on_Next_pressed():
 	step += 1
@@ -74,6 +86,7 @@ func Turn_AccountSetup():
 	$AccountSetup.show()
 	
 	$Control/HBox/Previous.show()
+	$Control/HBox/Next.hide()
 	
 func Turn_TermsAndConditions():
 	$LanguageSetup.hide()
