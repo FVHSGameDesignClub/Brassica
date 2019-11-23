@@ -2,8 +2,8 @@
 
 [ext_resource path="res://Scenes/Screen/Setup/LanguageSetup.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Screen/SetupScreen/Language/String/English.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Screen/SetupScreen/Language/String/Korean.png" type="Texture" id=3]
-[ext_resource path="res://Assets/Screen/SetupScreen/Language/String/Spanish.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Screen/SetupScreen/Language/String/Spanish.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Screen/SetupScreen/Language/String/Korean.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Screen/SetupScreen/Language/Language.png" type="Texture" id=5]
 
 [sub_resource type="SpriteFrames" id=1]
@@ -15,12 +15,12 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
-"name": "Korean",
+"name": "Spanish",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ) ],
 "loop": true,
-"name": "Spanish",
+"name": "Korean",
 "speed": 5.0
 } ]
 
@@ -59,19 +59,19 @@ margin_bottom = 482.0
 scroll_horizontal_enabled = false
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Languages"]
-margin_right = 160.0
+margin_right = 164.0
 margin_bottom = 71.0
-rect_min_size = Vector2( 160, 0 )
+rect_min_size = Vector2( 164, 0 )
 alignment = 1
 
 [node name="VBOX" type="VBoxContainer" parent="Languages/HBoxContainer"]
-margin_right = 160.0
+margin_right = 164.0
 margin_bottom = 71.0
 
 [node name="English" type="Button" parent="Languages/HBoxContainer/VBOX"]
-margin_right = 160.0
+margin_right = 164.0
 margin_bottom = 21.0
-rect_min_size = Vector2( 160, 0 )
+rect_min_size = Vector2( 164, 0 )
 custom_styles/focus = SubResource( 2 )
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -82,9 +82,9 @@ flat = true
 
 [node name="Spanish" type="Button" parent="Languages/HBoxContainer/VBOX"]
 margin_top = 25.0
-margin_right = 160.0
+margin_right = 164.0
 margin_bottom = 46.0
-rect_min_size = Vector2( 160, 0 )
+rect_min_size = Vector2( 164, 0 )
 custom_styles/focus = SubResource( 2 )
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -95,9 +95,9 @@ flat = true
 
 [node name="Korean" type="Button" parent="Languages/HBoxContainer/VBOX"]
 margin_top = 50.0
-margin_right = 160.0
+margin_right = 164.0
 margin_bottom = 71.0
-rect_min_size = Vector2( 160, 0 )
+rect_min_size = Vector2( 164, 0 )
 custom_styles/focus = SubResource( 2 )
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
