@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ButtonsPreviousDisabled.png-087c1e615d225ff0b9542586b4109c25.stex"
+path="res://.import/Shutdown.png-eb1c585f634f8381cdc025dea2cb45d0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UX/Buttons/SetupButtons/ButtonsPreviousDisabled.png"
-dest_files=[ "res://.import/ButtonsPreviousDisabled.png-087c1e615d225ff0b9542586b4109c25.stex" ]
+source_file="res://Assets/Screen/LoginScreen/Buttons/Shutdown.png"
+dest_files=[ "res://.import/Shutdown.png-eb1c585f634f8381cdc025dea2cb45d0.stex" ]
 
 [params]
 

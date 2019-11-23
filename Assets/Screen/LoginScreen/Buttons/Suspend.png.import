@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ButtonsPreviousHovered.png-c2e8c3ccaa4f249067a31dd1e2675ba2.stex"
+path="res://.import/Suspend.png-d8b9c03c213fed7b40d2c454cb174523.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UX/Buttons/SetupButtons/ButtonsPreviousHovered.png"
-dest_files=[ "res://.import/ButtonsPreviousHovered.png-c2e8c3ccaa4f249067a31dd1e2675ba2.stex" ]
+source_file="res://Assets/Screen/LoginScreen/Buttons/Suspend.png"
+dest_files=[ "res://.import/Suspend.png-d8b9c03c213fed7b40d2c454cb174523.stex" ]
 
 [params]
 
