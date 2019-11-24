@@ -20,7 +20,7 @@ func Label_Spanish():
 	$Res/Center/HBoxContainer/Labels/Fullname.set_text("Nombre completo: ")
 	$Res/Center/HBoxContainer/Labels/Accountname.set_text("Nombre de la cuenta: ")
 	$Res/Center/HBoxContainer/Labels/Password.set_text("Contraseña: ")
-	$Res/Center/HBoxContainer/Labels/Hint.set_text("Indicadión: ")
+	$Res/Center/HBoxContainer/Labels/Hint.set_text("Indicación: ")
 	
 	$Res/Center/HBoxContainer/VBoxContainer/Alignment/Username/FullName.set_placeholder("nombre completo")
 	$Res/Center/HBoxContainer/VBoxContainer/Alignment/Username/AccountName.set_placeholder("nombre de la cuenta")
