@@ -2,8 +2,8 @@ extends Node2D
 
 var Fullname
 var Password
-var Hint_label
 var Hint
+var Hint_label
 
 var Language
 
@@ -16,6 +16,7 @@ var lang = ConfigFile.new()
 
 func _ready():
 	loadData()
+	loadLanguage()
 
 func _process(delta):
 	
@@ -31,14 +32,17 @@ func _process(delta):
 		Try += 1
 	
 	if Try > 5:
-		$Hint.show()
+		$HintContainer.show()
 	
 	if Language == "English":
-		Hint_label = "Hint: "
+		Hint_label = "Password Hint"
 	elif Language == "Spanish":
-		Hint_label = ": "
+		Hint_label = "Contraseña Indicación"
+	elif Language == "Korean":
+		Hint_label = "암호 힌트"
 	
-	$VerticalCenter/HorizontalCenter/Center/Align/Hint.set_text(Hint)
+	$HintContainer/HintLabel.set_text(Hint_label)
+	$HintContainer/HBoxContainer/Hint.set_text(Hint)
 
 func loadData():
 	data.load("user://data/user.cfg")

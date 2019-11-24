@@ -1,13 +1,14 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Scenes/Screen/LoginScreen.gd" type="Script" id=1]
 [ext_resource path="res://Assets/UX/InGameBackground/MojaveDay.png" type="Texture" id=2]
 [ext_resource path="res://Assets/UX/Profile/Player.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Screen/LoginScreen/Password.png" type="Texture" id=4]
-[ext_resource path="res://Assets/Screen/LoginScreen/Buttons/Suspend.png" type="Texture" id=5]
-[ext_resource path="res://Assets/Screen/LoginScreen/Buttons/Restart.png" type="Texture" id=6]
-[ext_resource path="res://Assets/Screen/LoginScreen/Buttons/Shutdown.png" type="Texture" id=7]
-[ext_resource path="res://Scenes/Engine/SaveSystem.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Assets/Screen/LoginScreen/Hint.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Screen/LoginScreen/Buttons/Suspend.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Screen/LoginScreen/Buttons/Restart.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Screen/LoginScreen/Buttons/Shutdown.png" type="Texture" id=8]
+[ext_resource path="res://Scenes/Engine/SaveSystem.tscn" type="PackedScene" id=9]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -36,9 +37,24 @@ font_path = "res://Assets/Fonts/NotoSansKR-Regular.otf"
 [sub_resource type="DynamicFont" id=8]
 font_data = SubResource( 7 )
 
-[sub_resource type="StyleBoxEmpty" id=9]
+[sub_resource type="DynamicFontData" id=14]
+font_path = "res://Assets/Fonts/OnIGothic/OnI.ttf"
+
+[sub_resource type="DynamicFont" id=15]
+size = 15
+font_data = SubResource( 14 )
+
+[sub_resource type="DynamicFontData" id=16]
+font_path = "res://Assets/Fonts/OnIGothic/OnI.ttf"
+
+[sub_resource type="DynamicFont" id=17]
+size = 14
+outline_color = Color( 0, 0, 0, 1 )
+font_data = SubResource( 16 )
 
 [sub_resource type="StyleBoxEmpty" id=10]
+
+[sub_resource type="StyleBoxEmpty" id=9]
 
 [sub_resource type="StyleBoxEmpty" id=11]
 
@@ -87,16 +103,16 @@ scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 3 )
 
 [node name="HSeparator" type="HSeparator" parent="VerticalCenter/HorizontalCenter/Center/Align"]
-margin_top = 312.0
+margin_top = 317.0
 margin_right = 160.0
-margin_bottom = 316.0
+margin_bottom = 321.0
 rect_min_size = Vector2( 128, 0 )
 custom_styles/separator = SubResource( 1 )
 
 [node name="Label" type="Label" parent="VerticalCenter/HorizontalCenter/Center/Align"]
-margin_top = 320.0
+margin_top = 325.0
 margin_right = 160.0
-margin_bottom = 347.0
+margin_bottom = 352.0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "FullName"
@@ -104,15 +120,21 @@ align = 1
 valign = 1
 
 [node name="HSeparator2" type="HSeparator" parent="VerticalCenter/HorizontalCenter/Center/Align"]
-margin_top = 351.0
+margin_top = 356.0
 margin_right = 160.0
-margin_bottom = 355.0
+margin_bottom = 360.0
+custom_styles/separator = SubResource( 4 )
+
+[node name="HSeparator3" type="HSeparator" parent="VerticalCenter/HorizontalCenter/Center/Align"]
+margin_top = 364.0
+margin_right = 160.0
+margin_bottom = 368.0
 custom_styles/separator = SubResource( 4 )
 
 [node name="LineEdit" type="LineEdit" parent="VerticalCenter/HorizontalCenter/Center/Align"]
-margin_top = 359.0
+margin_top = 372.0
 margin_right = 160.0
-margin_bottom = 389.0
+margin_bottom = 402.0
 rect_min_size = Vector2( 160, 30 )
 custom_styles/focus = SubResource( 5 )
 custom_styles/normal = SubResource( 6 )
@@ -123,31 +145,61 @@ secret_character = "•"
 placeholder_text = " Enter Password"
 placeholder_alpha = 0.3
 
-[node name="Hint" type="Label" parent="VerticalCenter/HorizontalCenter/Center/Align"]
-margin_top = 393.0
-margin_right = 160.0
-margin_bottom = 407.0
+[node name="HintContainer" type="VBoxContainer" parent="."]
+margin_top = 405.0
+margin_right = 1280.0
+margin_bottom = 465.0
+rect_min_size = Vector2( 320, 60 )
+
+[node name="Sprite" type="Sprite" parent="HintContainer"]
+position = Vector2( 640, 20 )
+texture = ExtResource( 5 )
+
+[node name="HintLabel" type="Label" parent="HintContainer"]
+margin_right = 1280.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 15 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "HINT"
+align = 1
+valign = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HintContainer"]
+margin_top = 19.0
+margin_right = 1280.0
+margin_bottom = 34.0
+alignment = 1
+
+[node name="Hint" type="Label" parent="HintContainer/HBoxContainer"]
+margin_left = 628.0
+margin_right = 652.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "hint"
 
 [node name="Buttons" type="HBoxContainer" parent="."]
 margin_top = 560.0
 margin_right = 1280.0
 margin_bottom = 622.0
 alignment = 1
-
-[node name="Sleep" type="Button" parent="Buttons"]
-margin_left = 538.0
-margin_right = 582.0
-margin_bottom = 62.0
-custom_styles/focus = SubResource( 9 )
-icon = ExtResource( 5 )
-flat = true
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="1" type="VSeparator" parent="Buttons"]
-margin_left = 586.0
-margin_right = 590.0
+margin_left = 538.0
+margin_right = 542.0
 margin_bottom = 62.0
 custom_styles/separator = SubResource( 10 )
+
+[node name="Sleep" type="Button" parent="Buttons"]
+margin_left = 546.0
+margin_right = 590.0
+margin_bottom = 62.0
+custom_styles/focus = SubResource( 9 )
+icon = ExtResource( 6 )
+flat = true
 
 [node name="2" type="VSeparator" parent="Buttons"]
 margin_left = 594.0
@@ -172,7 +224,7 @@ margin_left = 618.0
 margin_right = 662.0
 margin_bottom = 62.0
 custom_styles/focus = SubResource( 11 )
-icon = ExtResource( 6 )
+icon = ExtResource( 7 )
 flat = true
 
 [node name="5" type="VSeparator" parent="Buttons"]
@@ -193,18 +245,18 @@ margin_right = 686.0
 margin_bottom = 62.0
 custom_styles/separator = SubResource( 12 )
 
-[node name="8" type="VSeparator" parent="Buttons"]
+[node name="Shutdown" type="Button" parent="Buttons"]
 margin_left = 690.0
-margin_right = 694.0
+margin_right = 734.0
+margin_bottom = 62.0
+custom_styles/focus = SubResource( 13 )
+icon = ExtResource( 8 )
+flat = true
+
+[node name="8" type="VSeparator" parent="Buttons"]
+margin_left = 738.0
+margin_right = 742.0
 margin_bottom = 62.0
 custom_styles/separator = SubResource( 12 )
 
-[node name="Shutdown" type="Button" parent="Buttons"]
-margin_left = 698.0
-margin_right = 742.0
-margin_bottom = 62.0
-custom_styles/focus = SubResource( 13 )
-icon = ExtResource( 7 )
-flat = true
-
-[node name="SaveSystem" parent="." instance=ExtResource( 8 )]
+[node name="SaveSystem" parent="." instance=ExtResource( 9 )]
