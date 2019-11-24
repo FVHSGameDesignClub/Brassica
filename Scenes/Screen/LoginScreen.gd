@@ -18,3 +18,6 @@ func loadData():
 	Fullname = data.get_value("Name", "Fullname")
 	Password = data.get_value("Security", "Password")
 	Hint = data.get_value("Security", "Hint")
+
+func check_password():
+	pass

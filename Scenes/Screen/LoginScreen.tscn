@@ -25,8 +25,8 @@ font_data = SubResource( 2 )
 [sub_resource type="StyleBoxTexture" id=6]
 texture = ExtResource( 4 )
 region_rect = Rect2( 0, 0, 128, 30 )
-expand_margin_left = 2.0
-expand_margin_right = 2.0
+expand_margin_left = 4.0
+expand_margin_right = 4.0
 expand_margin_top = 2.0
 expand_margin_bottom = 2.0
 
@@ -87,16 +87,16 @@ scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 3 )
 
 [node name="HSeparator" type="HSeparator" parent="VerticalCenter/HorizontalCenter/Center/Align"]
-margin_top = 324.0
+margin_top = 321.0
 margin_right = 160.0
-margin_bottom = 328.0
+margin_bottom = 325.0
 rect_min_size = Vector2( 128, 0 )
 custom_styles/separator = SubResource( 1 )
 
 [node name="Label" type="Label" parent="VerticalCenter/HorizontalCenter/Center/Align"]
-margin_top = 332.0
+margin_top = 329.0
 margin_right = 160.0
-margin_bottom = 359.0
+margin_bottom = 356.0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "FullName"
@@ -104,15 +104,16 @@ align = 1
 valign = 1
 
 [node name="HSeparator2" type="HSeparator" parent="VerticalCenter/HorizontalCenter/Center/Align"]
-margin_top = 363.0
+margin_top = 360.0
 margin_right = 160.0
-margin_bottom = 367.0
+margin_bottom = 364.0
 custom_styles/separator = SubResource( 4 )
 
 [node name="LineEdit" type="LineEdit" parent="VerticalCenter/HorizontalCenter/Center/Align"]
-margin_top = 371.0
+margin_top = 368.0
 margin_right = 160.0
-margin_bottom = 396.0
+margin_bottom = 398.0
+rect_min_size = Vector2( 160, 30 )
 custom_styles/focus = SubResource( 5 )
 custom_styles/normal = SubResource( 6 )
 custom_fonts/font = SubResource( 8 )
