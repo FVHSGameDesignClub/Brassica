@@ -1,11 +1,18 @@
 extends Node2D
 
+
 var config_exists = false
 
 func _ready():
 	check_config_file_exist()
 
 func _process(delta):
+	
+	var if_splash_finished = get_node("SplashScreen").is_splash_finished
+	
+	if if_splash_finished:
+		$SplashScreen.hide()
+	
 	if config_exists:
 		setup_is_over()
 		
@@ -16,6 +23,9 @@ func _process(delta):
 		
 		if is_Setup_Over == true:
 			setup_is_over()
+
+func splash_is_over():
+	pass
 
 func setup_is_over():
 	get_node("SetupScreen").hide()
