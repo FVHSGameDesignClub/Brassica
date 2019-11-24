@@ -1,8 +1,9 @@
 extends Node2D
 
-func _ready():
-	$BootScreen.play("Default")
-	pass
+var is_splash_finished = false
 
-func _on_BootScreen_animation_finished():
-	$BootScreen.hide()
+func _ready():
+	$BootSplash.play("default")
+
+func _on_BootSplash_animation_finished():
+	is_splash_finished = true
