@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Assets/Screen/SetupScreen/Produce/String/Spanish.png" type="Texture" id=1]
-[ext_resource path="res://Assets/Screen/SetupScreen/Produce/String/English.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Screen/SetupScreen/Produce/String/English.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Screen/SetupScreen/Produce/String/Spanish.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Screen/SetupScreen/Produce/String/Korean.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Screen/SetupScreen/Produce/FVHSPresent.png" type="Texture" id=4]
 
@@ -9,12 +9,12 @@
 animations = [ {
 "frames": [ ExtResource( 1 ) ],
 "loop": true,
-"name": "Spanish",
+"name": "English",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 2 ) ],
 "loop": true,
-"name": "English",
+"name": "Spanish",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 3 ) ],
